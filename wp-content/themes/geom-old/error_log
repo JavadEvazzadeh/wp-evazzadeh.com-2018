@@ -1,0 +1,2 @@
+[12-Jul-2014 13:40:25 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/geom/index.php on line 1
+[05-Jul-2015 14:02:21 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/geom/index.php on line 1

@@ -1,0 +1,13 @@
+[27-Apr-2015 15:27:09 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[09-May-2015 07:12:31 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[10-May-2015 06:09:30 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[21-Jun-2015 18:29:33 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[22-Jun-2015 17:39:09 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[30-Jun-2015 09:52:57 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[23-Jul-2015 06:58:02 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[14-Aug-2015 06:27:01 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[25-Aug-2015 22:56:39 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[09-Sep-2015 08:21:39 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[12-Sep-2015 14:43:31 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[17-Sep-2015 14:56:31 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51
+[04-Oct-2015 19:46:31 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/evazzade/public_html/blog/wp-content/plugins/hello.php on line 51

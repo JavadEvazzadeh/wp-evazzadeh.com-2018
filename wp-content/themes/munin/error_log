@@ -1,0 +1,14 @@
+[01-Dec-2014 08:52:17 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[01-Dec-2014 08:52:17 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[30-Jan-2015 13:38:03 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[30-Jan-2015 13:38:03 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[28-Feb-2015 12:40:26 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[01-Mar-2015 13:29:19 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[26-Mar-2015 04:31:30 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[26-Mar-2015 04:31:31 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[29-Jun-2015 02:48:09 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[30-Jun-2015 09:10:46 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[30-Jun-2015 09:10:49 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[03-Jul-2015 01:28:52 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
+[19-Jul-2015 13:16:31 UTC] PHP Fatal error:  Call to undefined function bloginfo() in /home/evazzade/public_html/blog/wp-content/themes/munin/404.php on line 6
+[26-Aug-2015 23:09:29 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/evazzade/public_html/blog/wp-content/themes/munin/index.php on line 1
