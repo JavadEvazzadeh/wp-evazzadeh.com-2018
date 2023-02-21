@@ -3,11 +3,17 @@
 Plugin Name: wp-jquery-lightbox
 Plugin URI: http://wordpress.org/extend/plugins/wp-jquery-lightbox/
 Description: A drop in replacement for LightBox-2 and similar plugins. Uses jQuery to save you from the JS-library mess in your header. :)
-Version: 1.4.8
+Version: 1.4.8.3
 Text Domain: wp-jquery-lightbox
 Author: Ulf Benjaminsson
-Author URI: http://www.ulfben.com
+Author URI: http://www.ulfbenjaminsson.com
 License: GPLv2 or later
+Contact: hello at ulfbenjaminsson dot com
+
+TODO:
+Replace attribute "rel" with "data-rel" to make HTML5 valid, https://wordpress.org/support/topic/replace-attribute-rel-with-data-rel-to-make-html5-valid/?replies=3
+Let the rel-attribute *contain* lightbox, rather than *only* be lightbox. https://wordpress.org/support/topic/fix-for-auto-lightboxing-links-that-contain-rel-attributes-already/?replies=12
+Replace graphic assets with genericons
 */
 add_action( 'plugins_loaded', 'jqlb_init' );
 global $jqlb_group;
@@ -62,6 +68,7 @@ function jqlb_register_settings(){
 	register_setting( 'jqlb-settings-group', 'jqlb_resize_speed', 'jqlb_pos_intval');
 	register_setting( 'jqlb-settings-group', 'jqlb_slideshow_speed', 'jqlb_pos_intval');		
 	register_setting( 'jqlb-settings-group', 'jqlb_use_theme_styles', 'jqlb_bool_intval');			
+	register_setting( 'jqlb-settings-group', 'jqlb_enqueue_in_footer', 'jqlb_bool_intval');
 	add_option('jqlb_showTitle', 1);
 	add_option('jqlb_showCaption', 1);
 	add_option('jqlb_showNumbers', 1);	
@@ -74,6 +81,7 @@ function jqlb_register_settings(){
 	add_option('jqlb_resize_speed', 400); 
 	add_option('jqlb_slideshow_speed', 4000); 	
 	add_option('jqlb_use_theme_styles', 0); 
+	add_option('jqlb_enqueue_in_footer', 1); 
 }
 function jqlb_register_menu_item() {		
 	add_options_page('jQuery Lightbox Options', 'jQuery Lightbox', 'manage_options', 'jquery-lightbox-options', 'jqlb_options_panel');
@@ -107,15 +115,16 @@ function jqlb_css(){
 			$fileName = 'lightbox.min.css';
 		}
 	}	
-	$uri = ( $haveThemeCss ) ? get_template_directory_uri().'/'.$fileName : plugin_dir_url(__FILE__).'styles/'.$fileName;	
-	wp_enqueue_style('jquery.lightbox.min.css', $uri, false, '1.4.6');	
+	$uri = ( $haveThemeCss ) ? get_stylesheet_directory_uri().'/'.$fileName : plugin_dir_url(__FILE__).'styles/'.$fileName;	
+	wp_enqueue_style('jquery.lightbox.min.css', $uri, false, '1.4.8.2');	
 }
 
 function jqlb_js() {			   	
 	if(is_admin() || is_feed()){return;}
-	wp_enqueue_script('jquery', '', array(), false, true);
-	wp_enqueue_script('wp-jquery-lightbox-swipe', plugins_url(JQLB_TOUCH_SCRIPT, __FILE__),  Array('jquery'), '1.4.6', true);	
-	wp_enqueue_script('wp-jquery-lightbox', plugins_url(JQLB_SCRIPT, __FILE__),  Array('jquery'), '1.4.6', true);
+	$enqueInFooter = get_option('jqlb_enqueue_in_footer') ? true : false;
+	wp_enqueue_script('jquery', '', array(), false, $enqueInFooter);
+	wp_enqueue_script('wp-jquery-lightbox-swipe', plugins_url(JQLB_TOUCH_SCRIPT, __FILE__),  Array('jquery'), '1.4.8.2', $enqueInFooter);	
+	wp_enqueue_script('wp-jquery-lightbox', plugins_url(JQLB_SCRIPT, __FILE__),  Array('jquery'), '1.4.8.2', $enqueInFooter);
 	wp_localize_script('wp-jquery-lightbox', 'JQLBSettings', array(
 		'showTitle'	=> get_option('jqlb_showTitle'),
 		'showCaption'	=> get_option('jqlb_showCaption'),
@@ -160,6 +169,27 @@ function jqlb_apply_lightbox($content, $id = -1){
 	}
 	return jqlb_do_regexp($content, $id);
 }
+
+//Matt's version to support multiple rel values
+//https://wordpress.org/support/topic/fix-for-auto-lightboxing-links-that-contain-rel-attributes-already?replies=12
+function jqlb_do_regexp_multirel($content, $id){
+	$id = esc_attr($id);
+	$a_tag_img_regex = "/(<a[^>]+href=['\"][^>]+\\.(?:bmp|gif|jpg|jpeg|png)[^>]+)>/i";
+	if (preg_match_all($a_tag_img_regex, $content, $a_tag_matches, PREG_SET_ORDER)) {
+		foreach ($a_tag_matches as $a_tag) {
+			$new_a_tag = $a_tag[0];
+			$rel_regex = "/(rel=['\"])(?![^>]*?(?:lightbox|nolb|nobox))([^'\"]+)(['\"])/i";
+			$new_a_tag = preg_replace($rel_regex, '$1lightbox['.$id.'] $2$3', $new_a_tag);
+
+			$no_rel_regex = "/(<a(?![^>]*?rel=['\"].+)[^>]+href=['\"][^>]+\\.(?:bmp|gif|jpg|jpeg|png)[^>]+)>/i";
+			$new_a_tag = preg_replace($no_rel_regex, '$1 rel="lightbox['.$id.']">', $new_a_tag);
+
+			if ($new_a_tag != $a_tag[0]) $content = str_replace($a_tag[0], $new_a_tag, $content);
+		}
+	}
+	return $content;
+}
+
 
 /* automatically insert rel="lightbox[nameofpost]" to every image with no manual work. 
 	if there are already rel="lightbox[something]" attributes, they are not clobbered. 
@@ -210,8 +240,7 @@ function jqlb_options_panel(){
 	?>
 	
 	<div class="wrap">
-	<h2>jQuery Lightbox</h2>	
-	<?php include_once(plugin_dir_path(__FILE__).'about.php'); ?>
+	<h2>jQuery Lightbox</h2>		
 	<form method="post" action="options.php">
 		<table>
 		<?php settings_fields('jqlb-settings-group'); ?>
@@ -285,7 +314,14 @@ function jqlb_options_panel(){
 				<input type="checkbox" id="jqlb_use_theme_styles" name="jqlb_use_theme_styles" value="1" <?php echo $check; ?> />	
 				<label for="jqlb_use_theme_styles" title="You must put lightbox.min.css or lightbox.min.[locale].css in your theme's style-folder. This is good to keep your CSS edits when updating the plugin."><?php _e('Use custom stylesheet', 'wp-jquery-lightbox'); ?></label>						
 			</td>			
-		</tr>						
+		</tr>				
+		<tr valign="baseline" colspan="2">			
+			<td>
+				<?php $check = get_option('jqlb_enqueue_in_footer') ? ' checked="yes" ' : ''; ?>
+				<input type="checkbox" id="jqlb_enqueue_in_footer" name="jqlb_enqueue_in_footer" value="1" <?php echo $check; ?> />	
+				<label for="jqlb_enqueue_in_footer" title="<?php _e('Uncheck this box to load jQuery and lightbox in the header of your page.', 'wp-jquery-lightbox'); ?>"><?php _e('Load JavaScripts in page footer', 'wp-jquery-lightbox'); ?></label>						
+			</td>			
+		</tr>					
 		<tr valign="baseline" colspan="2">
 			<td colspan="2">					
 				<input type="text" id="jqlb_resize_speed" name="jqlb_resize_speed" value="<?php echo intval(get_option('jqlb_resize_speed')) ?>" size="3" />

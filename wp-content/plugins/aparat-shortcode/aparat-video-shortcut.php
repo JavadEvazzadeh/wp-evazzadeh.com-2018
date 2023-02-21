@@ -28,11 +28,15 @@ function aparat_embed_video_player($atts, $content = '') {
 
     if(strlen($content) == 62){
         $content = substr($content, 24,38);
-    }elseif(strlen($content) == 29){
+    }
+	elseif(strlen($content) == 30){
+        $content = substr($content, 25,30);
+    }
+	elseif(strlen($content) == 29){
         $content = substr($content, 24,29);
     }
 
-    $output = '<iframe src="http://www.aparat.com/video/video/embed/videohash/'. $content . '/vt/frame"
+    $output = '<iframe src="https://www.aparat.com/video/video/embed/videohash/'. $content . '/vt/frame"
                 allowFullScreen="'. $fullscreen . '"
                 webkitallowfullscreen="'. $fullscreen . '"
                 mozallowfullscreen="'. $fullscreen . '"

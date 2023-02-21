@@ -1,40 +1,85 @@
-# Translation of Twenty Sixteen in Persian
-# This file is distributed under the same license as the Twenty Sixteen package.
+# Translation of Themes - Twenty Sixteen in Persian
+# This file is distributed under the same license as the Themes - Twenty Sixteen package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-01-31 17:20:25+0000\n"
+"PO-Revision-Date: 2019-11-13 22:41:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
-"Project-Id-Version: Twenty Sixteen\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: fa\n"
+"Project-Id-Version: Themes - Twenty Sixteen\n"
 
-#. Description of the plugin/theme
+#. Description of the theme
 msgid "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere."
 msgstr "دوهزاروشانزده برداشتی مدرن از پوسته‌های همیشگی وردپرس، با سربرگی افقی و نوار کناری اختیاری، مناسب برای وبلاگ‌ها و سایت‌ها است. این پوسته دارای گزینه‌های رنگ سفارشی و پوسته‌های رنگی پیشفرض زیبا و دارای صفحه‌بندی سیال و سازگار با موبایل است. دوهزاروشانزده وردپرس شما را از همیشه زیباتر خواهد کرد."
 
-#. Theme Name of the plugin/theme
+#. Theme Name of the theme
 msgid "Twenty Sixteen"
 msgstr "دوهزار و شانزده"
 
-#. translators: %s: Name of current post
-#: image.php:84 template-parts/content-page.php:37
-#: template-parts/content-search.php:28 template-parts/content-search.php:43
-#: template-parts/content-single.php:45 template-parts/content.php:49
-msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "ویرایش<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: functions.php:204
+msgid "Bright Red"
+msgstr "قرمز درخشان"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:184 template-parts/content.php:28
+#: functions.php:199
+msgid "Dark Red"
+msgstr "قرمز تیره"
+
+#: functions.php:194
+msgid "Medium Brown"
+msgstr "قهوه‌ای متوسط"
+
+#: functions.php:189
+msgid "Dark Brown"
+msgstr "قهوه‌ای تیره"
+
+#: functions.php:184
+msgid "Light Blue"
+msgstr "آبی روشن"
+
+#: functions.php:179
+msgid "Bright Blue"
+msgstr "آبی درخشان"
+
+#: functions.php:174
+msgid "Blue Gray"
+msgstr "خاکستری آبی"
+
+#: functions.php:169
+msgid "White"
+msgstr "سفید"
+
+#: functions.php:164
+msgid "Light Gray"
+msgstr "خاکستری روشن"
+
+#: functions.php:159
+msgid "Medium Gray"
+msgstr "خاکستری متوسط"
+
+#: functions.php:154
+msgid "Dark Gray"
+msgstr "خاکستری تیره"
+
+#. translators: %s: Post title.
+#: template-parts/content.php:29 inc/template-tags.php:195
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "ادامه خواندن<span class=\"screen-reader-text\"> \"%s\"</span>"
 
-#: inc/customizer.php:246
+#. translators: %s: Post title.
+#: image.php:88 template-parts/content-page.php:39
+#: template-parts/content.php:53 template-parts/content-search.php:28
+#: template-parts/content-search.php:43 template-parts/content-single.php:47
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "ویرایش<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: inc/customizer.php:347
 msgid "Red"
 msgstr "قرمز"
 
-#. translators: %s: post title
+#. translators: %s: Post title.
 #: comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
@@ -50,36 +95,37 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "جستجو &hellip;"
 
-#: searchform.php:13 searchform.php:14
+#: searchform.php:13
 msgctxt "label"
 msgid "Search for:"
-msgstr "جستجو برای "
+msgstr "جستجو برای:"
+
+#: footer.php:30
+msgid "Footer Social Links Menu"
+msgstr "فهرست پیوند شبکه‌های اجتماعی پابرگ"
 
 #: footer.php:17
 msgid "Footer Primary Menu"
 msgstr "فهرست اصلی پابرگ"
 
-#: footer.php:28
-msgid "Footer Social Links Menu"
-msgstr "فهرست پیوند شبکه‌های اجتماعی پابرگ"
-
-#: functions.php:144
+#: functions.php:269
 msgid "Add widgets here to appear in your sidebar."
-msgstr "ابزارک‌ها را به این بخش بیافزایید تا در ستون‌کناری نمایش داده شوند."
+msgstr "ابزارک‌ها را به این بخش بیافزایید تا در ستون‌کناری تان نمایش داده شوند."
 
 #: template-parts/content.php:14
 msgid "Featured"
 msgstr "ویژه"
 
-#: template-parts/content-none.php:28
+#: template-parts/content-none.php:33
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "به‌نظر می‌رسد نمی‌توانیم چیزی که شما به دنبال آن هستید را بیابیم. شاید جستجو بتواند به شما کمک کند."
 
-#: template-parts/content-none.php:23
+#: template-parts/content-none.php:28
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "بدبختانه جستجوی شما نتیجه‌ای در بر نداشت. با واژگانی دیگر جستجو کنید."
+msgstr "با عرض پوزش، چیزی همسان با واژه های جستجوی شما پیدا نشد. لطفا مجددا با کلمات کلیدی متفاوتی سعی نمائید."
 
-#: template-parts/content-none.php:19
+#. translators: %s: Post editor URL.
+#: template-parts/content-none.php:22
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "میخواهید اولین نوشته‌ی خود را منتشر کنید؟ <a href=\"%1$s\">از اینجا آغاز کنید</a>. "
 
@@ -87,7 +133,8 @@ msgstr "میخواهید اولین نوشته‌ی خود را منتشر کن�
 msgid "Nothing Found"
 msgstr "پیدا نشد"
 
-#: template-parts/biography.php:33
+#. translators: %s: The post author display name.
+#: template-parts/biography.php:35
 msgid "View all posts by %s"
 msgstr "دیدن همه‌ی نوشته‌های %s"
 
@@ -95,215 +142,210 @@ msgstr "دیدن همه‌ی نوشته‌های %s"
 msgid "Author:"
 msgstr "نویسنده:"
 
-#: single.php:38
+#: single.php:42
 msgid "Previous post:"
 msgstr "نوشته قبلی:"
 
-#: single.php:35
+#: single.php:41
+msgid "Previous"
+msgstr "قبلی"
+
+#: single.php:39
 msgid "Next post:"
 msgstr "نوشته بعدی:"
 
-#: single.php:37
-msgid "Previous"
-msgstr "پیشین"
-
-#: single.php:34
+#: single.php:38
 msgid "Next"
-msgstr "پسین"
+msgstr "بعدی"
 
-#: search.php:18
+#. translators: %s: The search query.
+#: search.php:21
 msgid "Search Results for: %s"
-msgstr "نتایج جست‌وجو برای: %s"
+msgstr "نتایج جستجو برای: %s"
 
-#: inc/template-tags.php:106
+#: inc/template-tags.php:113
 msgctxt "Used before tag names."
 msgid "Tags"
 msgstr "برچسب‌ها"
 
-#: inc/template-tags.php:98
+#: inc/template-tags.php:104
 msgctxt "Used before category names."
 msgid "Categories"
 msgstr "دسته‌ها"
 
-#: inc/template-tags.php:95 inc/template-tags.php:103
+#: inc/template-tags.php:100 inc/template-tags.php:109
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
-msgstr ", "
+msgstr "، "
 
-#: inc/template-tags.php:79
+#: inc/template-tags.php:84
 msgctxt "Used before publish date."
 msgid "Posted on"
 msgstr "ارسال شده در"
 
-#: inc/template-tags.php:50
+#. translators: %s: Post title.
+#: inc/template-tags.php:53
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\"> برای %s</span> دیدگاهی بنویسید"
 
-#: inc/template-tags.php:38
+#: inc/template-tags.php:40
 msgctxt "Used before post format."
 msgid "Format"
 msgstr "ساختار"
 
-#: inc/template-tags.php:25
+#: inc/template-tags.php:26
 msgctxt "Used before post author name."
 msgid "Author"
 msgstr "نویسنده"
 
-#: inc/customizer.php:256
+#: functions.php:209 inc/customizer.php:357
 msgid "Yellow"
 msgstr "زرد"
 
-#: inc/customizer.php:236
+#: inc/customizer.php:337
 msgid "Gray"
 msgstr "خاکستری"
 
-#: inc/customizer.php:226
+#: inc/customizer.php:327
 msgid "Dark"
 msgstr "تیره"
 
-#: inc/customizer.php:171
-msgid "Secondary Text Color"
-msgstr "رنگ دوم متن "
-
-#: inc/customizer.php:216
+#: inc/customizer.php:317
 msgid "Default"
-msgstr "پیش‌فرض"
+msgstr "پیشفرض"
 
-#: inc/customizer.php:159
+#: inc/customizer.php:242
+msgid "Secondary Text Color"
+msgstr "رنگ متن دوم"
+
+#: inc/customizer.php:221
 msgid "Main Text Color"
-msgstr "رنگ اصلی نوشته"
+msgstr "رنگ متن اصلی"
 
-#: inc/customizer.php:132
-msgid "Page Background Color"
-msgstr "رنگ پس‌زمینه صفحه"
-
-#: inc/customizer.php:147
+#: inc/customizer.php:200
 msgid "Link Color"
 msgstr "رنگ پیوند"
 
-#: inc/customizer.php:117
-msgid "Base Color Scheme"
-msgstr "شمای رنگ پایه"
+#: inc/customizer.php:176
+msgid "Page Background Color"
+msgstr "رنگ زمینه صفحه"
 
-#: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
+#: inc/customizer.php:153
+msgid "Base Color Scheme"
+msgstr "طرح رنگ پایه"
+
+#. translators: %s: The current WordPress version.
+#: inc/back-compat.php:42 inc/back-compat.php:56 inc/back-compat.php:75
 msgid "Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again."
 msgstr "دوهزاروشانزده دستکم به وردپرس ۴٫۴ نیاز دارد. شما در حال حاضر از نگارش %s استفاده می‌کنید. لطفا پس از به‌روزرسانی، دوباره تلاش کنید."
 
-#: image.php:102 single.php:29
+#: single.php:31 image.php:107
 msgctxt "Parent post link"
 msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
-msgstr "<span class=\"meta-nav\">منتشره در</span><span class=\"post-title\">%title</span>"
+msgstr "<span class=\"meta-nav\">منتشر شده در</span><span class=\"post-title\">%title</span>"
 
-#: image.php:73
+#: image.php:77
 msgctxt "Used before full size attachment link."
 msgid "Full size"
 msgstr "اندازه کامل"
 
-#: image.php:56 template-parts/content-page.php:23
-#: template-parts/content-single.php:25 template-parts/content.php:33
+#: image.php:58 template-parts/content-page.php:24
+#: template-parts/content.php:36 template-parts/content-single.php:26
 msgid "Pages:"
 msgstr "صفحه‌ها:"
 
-#: image.php:25
+#: image.php:26
 msgid "Next Image"
 msgstr "عکس بعدی"
 
-#: image.php:24
+#: image.php:25
 msgid "Previous Image"
 msgstr "عکس پیشین"
 
-#: header.php:45
+#: header.php:50
 msgid "Menu"
-msgstr "گزینگان"
+msgstr "فهرست"
 
-#: header.php:27
+#: header.php:28
 msgid "Skip to content"
-msgstr "رفتن به محتوا"
+msgstr "پرش به محتوا"
 
-#: functions.php:271
+#: functions.php:420
 msgid "collapse child menu"
 msgstr "بستن زیرفهرست"
 
-#: functions.php:270
+#: functions.php:419
 msgid "expand child menu"
 msgstr "بازکردن زیرفهرست"
 
-#. translators: If there are characters in your language that are not supported
-#. by Montserrat, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:194
-msgctxt "Montserrat font: on or off"
-msgid "on"
-msgstr "روشن"
-
-#. translators: If there are characters in your language that are not supported
-#. by Merriweather, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:189
-msgctxt "Merriweather font: on or off"
-msgid "on"
-msgstr "روشن"
-
-#: functions.php:162
-msgid "Content Bottom 2"
-msgstr "زیرِ محتوا ۲"
-
-#: functions.php:154 functions.php:164
-msgid "Appears at the bottom of the content on posts and pages."
-msgstr "زیر محتوای نوشته‌ها و برگه‌ها نمایش داده خواهد شد"
-
-#: functions.php:152
-msgid "Content Bottom 1"
-msgstr "زیرِ محتوا ۱"
-
-#. translators: If there are characters in your language that are not supported
-#. by Inconsolata, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:199
+#: functions.php:338
 msgctxt "Inconsolata font: on or off"
 msgid "on"
 msgstr "off"
 
-#: functions.php:142
+#: functions.php:330
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "روشن"
+
+#: functions.php:322
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "روشن"
+
+#: functions.php:291
+msgid "Content Bottom 2"
+msgstr "زیرِ محتوا ۲"
+
+#: functions.php:281 functions.php:293
+msgid "Appears at the bottom of the content on posts and pages."
+msgstr "زیر محتوای نوشته‌ها و برگه‌ها نمایش داده خواهد شد"
+
+#: functions.php:279
+msgid "Content Bottom 1"
+msgstr "زیرِ محتوا ۱"
+
+#: functions.php:267
 msgid "Sidebar"
 msgstr "ستون‌کناری"
 
-#: functions.php:78 header.php:60
+#: functions.php:93 header.php:67
 msgid "Social Links Menu"
-msgstr "فهرست شبکه‌های اجتماعی"
+msgstr "فهرست پیوند های شبکه‌های اجتماعی"
 
-#: functions.php:77 header.php:49
+#: functions.php:92 header.php:54
 msgid "Primary Menu"
-msgstr "گزینگان اصلی"
+msgstr "فهرست اصلی"
 
-#: footer.php:51
+#. translators: %s: WordPress
+#: footer.php:63
 msgid "Proudly powered by %s"
-msgstr "با افتخار، نیرو گرفته از %s"
+msgstr "قدرت سایت در استفاده از %s"
 
-#: comments.php:69
+#: comments.php:71
 msgid "Comments are closed."
 msgstr "دیدگاه‌ها بسته شده‌اند."
 
-#. translators: 1: number of comments, 2: post title
+#. translators: 1: Number of comments, 2: Post title.
 #: comments.php:35
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s دیدگاه برای &ldquo;%2$s&rdquo;"
 
-#: archive.php:51 image.php:60 index.php:48 search.php:39
-#: template-parts/content-page.php:27 template-parts/content-single.php:29
-#: template-parts/content.php:37
+#: image.php:62 template-parts/content-page.php:28
+#: template-parts/content.php:40 template-parts/content-single.php:30
+#: search.php:46 archive.php:54 index.php:51
 msgid "Page"
 msgstr "برگه"
 
-#: archive.php:50 index.php:47 search.php:38
+#: search.php:45 archive.php:53 index.php:50
 msgid "Next page"
-msgstr "برگه بعدی"
+msgstr "صفحه بعدی"
 
-#: archive.php:49 index.php:46 search.php:37
+#: search.php:44 archive.php:52 index.php:49
 msgid "Previous page"
-msgstr "برگه قبلی"
+msgstr "صفحه قبلی"
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location. Maybe try a search?"
@@ -311,18 +353,17 @@ msgstr "به نظر می‌رسد چیزی اینجا نیست. مایل هست�
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "اوه! این برگه پیدا نمی‌شه."
+msgstr "اوه! صفحه مورد نظر پیدا نشد."
 
-#. Author of the plugin/theme
+#. Author of the theme
 msgid "the WordPress team"
 msgstr "گروه وردپرس"
 
-#. Theme URI of the plugin/theme
+#. Theme URI of the theme
 msgid "https://wordpress.org/themes/twentysixteen/"
 msgstr "https://wordpress.org/themes/twentysixteen/"
 
-#. #-#-#-#-#  twentysixteen.pot (Twenty Sixteen 1.1)  #-#-#-#-#
-#. Author URI of the plugin/theme
-#: footer.php:51
+#. Author URI of the theme
+#: footer.php:60
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
